@@ -1,280 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background: #000 url(../bg.jpg);
-    background-size: 100%;
-    background-attachment: fixed;
-    font-family: 'Poppins', sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  background: #000 url(../bg.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.container{
-    position: absolute;
-    top: 80px;
-    left: 100px;
-    right: 100px;
-    bottom: 80px;
-    background-attachment: fixed;
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  right: 100px;
+  bottom: 80px;
+  background-attachment: fixed;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(99 99 99 / 21%);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 7em;
+  line-height: 0.7em;
+  color: white;
+  margin-bottom: 0.5em;
+  font-family: "Oswald", sans-serif;
+}
+
+.container h2 span {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 6px;
+  font-size: 0.3em;
+}
+
+.countdown {
+  display: flex;
+  margin-bottom: 3em;
+}
+
+.countdown div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 3em;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.countdown div:before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0px;
+  width: 100%;
+  height: 35px;
+  color: white;
+  font-size: 0.35em;
+  line-height: 35px;
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+}
+
+.countdown #day:before {
+  content: "Days";
+}
+
+.countdown #hour:before {
+  content: "Hours";
+}
+
+.countdown #minute:before {
+  content: "Minutes";
+}
+
+.countdown #second:before {
+  content: "Seconds";
+}
+
+.container .logo {
+  width: 180px;
+
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.socials img {
+  width: 40px;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+.socials div {
+  margin: 0 2em;
+  display: flex;
+  place-items: baseline;
+  align-items: baseline;
+}
+.socials p {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.socials a {
+  color: white;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.socials a:hover img {
+  filter: none;
+}
+.socials img {
+  margin-right: 5px;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1350px) {
+  .container {
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .socials {
     flex-direction: column;
-    background-color: rgb(99 99 99 / 21%);
-    backdrop-filter: blur(12px);
-    border-radius: 15px;
+  }
+  .socials div {
+    justify-content: center;
+  }
+
+  .socials .social-fb {
+    margin-bottom: 0.7em;
+  }
+  .container h2 {
+    font-size: 5em;
+  }
 }
 
-.container h2{
-    text-align: center;
-    font-size: 7em;
-    line-height: 0.7em;
-    color: white;
-    margin-bottom: 0.5em;
-    font-family: 'Oswald', sans-serif;
-}
+@media (max-width: 991px) {
+  .container h2 {
+    font-size: 4em;
+  }
+  .countdown div {
+    font-size: 1.7em;
+    width: 70px;
+    height: 70px;
+    line-height: 73px;
+  }
 
-.container h2 span{
-    display: block;
-    font-weight: 300;
-    letter-spacing: 6px;
-    font-size: 0.3em;
-}
-
-.countdown{
-    display: flex;
-    margin-bottom: 3em;
-}
-
-.countdown div{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    color: #fff;
-    margin: 0 15px;
-    font-size: 3em;
-    border-radius: 50%;
-    border: 3px solid white;
-    
-}
-
-
-.countdown div:before{
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    left: 0px;
-    width: 100%;
-    height: 35px;
-    color: white;
-    font-size: 0.35em;
-    line-height: 35px;
-    font-weight: 600;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 3px;
-}
-
-.countdown #day:before{
-    content: 'Days';
-}
-
-.countdown #hour:before{
-    content: 'Hours';
-}
-
-.countdown #minute:before{
-    content: 'Minutes';
-}
-
-.countdown #second:before{
-    content: 'Seconds';
-}
-
-.container .logo{
-    width: 180px;
-
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-.socials img{
-    width: 40px;
-    
-}
-.socials{
-    display: flex;
-    flex-direction: row;
-}
-.socials div{
-    margin: 0 2em;
-    display: flex;
-    place-items: baseline;
-    align-items: baseline;
-    
-}
-.socials p{
-    color: white;
-    font-size: 18px;
+  .countdown div:before {
+    font-size: 0.55em;
     font-weight: 500;
-}
+  }
+  .socials img {
+    width: 25px;
+  }
 
-.socials a{
-    color: white;
-    margin-left: 5px;
-    font-size: 19px;
-}
-
-.socials a:hover img{
-    filter: none;
-}
-.socials img{
-    margin-right: 5px;
-}
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }}
-
-
-@media(max-width:1350px){
-    .container{
-        top: 50px;
-        left: 50px;
-        right: 50px;
-        bottom: 50px;
-    }
-}
-
-@media(max-width:1200px){
-    .socials{
-        flex-direction: column;
-        
-    }
-    .socials div{
-        justify-content: center;
-    }
-
-    .socials .social-fb{
-        margin-bottom: 0.7em;
-    }
-    .container h2{
-        font-size: 5em;
-    }
-}
-
-
-@media(max-width:991px){
-    .container h2{
-        font-size: 4em;
-    }
-    .countdown div{
-        font-size: 1.7em;
-        width: 70px;
-        height: 70px;
-        line-height: 73px;
-    }
-
-    .countdown div:before{
-        font-size: 0.55em;
-        font-weight: 500;
-    }
-    .socials img{
-        width: 25px;
-    }
-
-    .socials p{
-        font-size: 16px;
-    }
-    .container .logo {
-        width: 120px;
-    }
-    .socials a{
+  .socials p {
+    font-size: 16px;
+  }
+  .container .logo {
+    width: 120px;
+  }
+  .socials a {
     font-size: 17px;
-    }
+  }
 }
 
-
-@media(max-width:540px){
-    .countdown div{
-        margin: 0;
-    }
-    .countdown{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 2em;
-    }
-    .container h2 {
-        line-height: 1em;
-    }
-    .container{
-        left: 30px;
-        right: 30px;
-    }
-    .container h2{
-        font-size: 3em;
-    }
-    .countdown div{
-        width: 55px;
-        height: 55px;
-        line-height: 60px;
-    }
-    .socials p {
-        font-size: 14px;
-    }
-    .socials a{
-        font-size: 15px;
-        }
-    .socials img {
-        width: 20px;
-    }
+@media (max-width: 540px) {
+  .countdown div {
+    margin: 0;
+  }
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+  .container h2 {
+    line-height: 1em;
+  }
+  .container {
+    left: 30px;
+    right: 30px;
+  }
+  .container h2 {
+    font-size: 3em;
+  }
+  .countdown div {
+    width: 55px;
+    height: 55px;
+    line-height: 60px;
+  }
+  .socials p {
+    font-size: 14px;
+  }
+  .socials a {
+    font-size: 15px;
+  }
+  .socials img {
+    width: 20px;
+  }
 }
 
-@media(max-width:400px){
-    .container .logo {
-        width: 60px;
-    }
-    .container h2 {
-        font-size: 2em;
-    }
-    .container h2 span {
-        
-        letter-spacing: 3px;
-        font-size: 0.4em;
-    }
-    .container{
-        left: 20px;
-        right: 20px;
-        bottom: 2px;
-        top: 2px;
-    }
-    .countdown div {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5em;
-        line-height: 40px;
-    }
+@media (max-width: 400px) {
+  .container .logo {
+    width: 60px;
+  }
+  .container h2 {
+    font-size: 2em;
+  }
+  .container h2 span {
+    letter-spacing: 3px;
+    font-size: 0.4em;
+  }
+  .container {
+    left: 20px;
+    right: 20px;
+    bottom: 2px;
+    top: 2px;
+  }
+  .countdown div {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    line-height: 40px;
+  }
 }
 
-
-
-.countainer #logo-anim{
-    position: relative;
-    animation: run infinite;
-    animation-direction: alternate;
+.countainer #logo-anim {
+  position: relative;
+  animation: run infinite;
+  animation-direction: alternate;
 }
 
 @keyframes run {
-    0% { left: 0%;}
-    50%{ left : 100%;}
-    100%{ left: 0%;}
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
 }
