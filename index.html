@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Origami Technology</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -42,19 +42,15 @@
         </div>
         <div class="social-gmail">
           <img src="gmail.svg" alt="" />
-          <p>Mail us at: origamitechnologynepal@gmail.com</p>
+          <p>
+            Mail us at: &nbsp; <span> origamitechnologynepal@gmail.com </span>
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
-
     <script type="text/javascript">
-      var countDate = new Date("Sep 7, 2021 00:00:00").getTime();
+      var countDate = new Date("Sep 25, 2021 00:00:00").getTime();
 
       function newYear() {
         var now = new Date().getTime();
@@ -79,29 +75,6 @@
       setInterval(function() {
         newYear();
       }, 1000);
-    </script>
-
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "107611271638502");
-      chatbox.setAttribute("attribution", "biz_inbox");
-
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml: true,
-          version: "v11.0",
-        });
-      };
-
-      (function(d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
     </script>
   </body>
 </html>
